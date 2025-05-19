@@ -16,7 +16,7 @@ function Invoke-PhaseScripts {
 
     $allPhases = @(
         @{ Name = "install"; Path = Join-Path $basePath "install" },
-        @{ Name = "config"; Path = Join-Path $basePath "config" },
+        @{ Name = "config"; Path = Join-Path $basePath "config" }
     )
 
     $selectedPhases = if ($Phase -eq "all") {
@@ -29,7 +29,7 @@ function Invoke-PhaseScripts {
         $phaseName = $entry.Name.ToUpper()
         $phasePath = Resolve-Path -Path $entry.Path
 
-        Write-Host "PHASE: $phaseName — Searching in: $phasePath"
+        Write-Host "PHASE: $phaseName — SEARCHING IN: $phasePath"
 
         $scripts = Get-ChildItem -Path $phasePath -Filter "*.ps1" -File
 
@@ -38,7 +38,7 @@ function Invoke-PhaseScripts {
                 continue
             }
 
-            Write-Host "RUNNING SCRIPT: $($script.FullName)"
+            Write-Host "Running Script: $($script.FullName)"
             if (-not $DryRun) {
                 & $script.FullName
             }
