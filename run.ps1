@@ -10,13 +10,14 @@ param (
 
 $ScoopInstall = "./runs/installScoop.ps1"
 $ChocoInstall = "./runs/installChoco.ps1"
+
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 . "$ScriptDir\settings.ps1"
 . "$ScriptDir\lib\common.ps1"
 
 function Main {
-    $ChocoInstall
-    $ScoopInstall
+    & $ChocoInstall
+    & $ScoopInstall
     Validate-Environment
 
     if ($Phase -eq "install" -or $Phase -eq "all") {
