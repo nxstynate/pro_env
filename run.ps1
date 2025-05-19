@@ -1,39 +1,49 @@
-# ===========================
-# dotfiles-windows/run.ps1
-# ===========================
 param (
-    [string]$Grep = "",
-    [ValidateSet("all", "install", "config", "post")]
+    [string]$Filter = "",
+    [ValidateSet("all", "install", "config")]
     [string]$Phase = "all",
     [switch]$DryRun
 )
 
-$ScoopInstall = "./runs/installScoop.ps1"
-$ChocoInstall = "./runs/installChoco.ps1"
+function Invoke-PhaseScripts {
+    param (
+        [string]$Filter,
+        [string]$Phase,
+        [switch]$DryRun
+    )
 
-$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-. "$ScriptDir\settings.ps1"
-. "$ScriptDir\lib\common.ps1"
+    $basePath = "..\pro-env"
 
-function Main {
-    & $ChocoInstall
-    & $ScoopInstall
-    Validate-Environment
+    $allPhases = @(
+        @{ Name = "install"; Path = Join-Path $basePath "install" },
+        @{ Name = "config"; Path = Join-Path $basePath "config" },
+    )
 
-    if ($Phase -eq "install" -or $Phase -eq "all") {
-        Log-Header "INSTALL PHASE"
-        RunPhase -Label "INSTALL" -Directory "$ScriptDir\runs" -Grep $Grep -DryRun:$DryRun
+    $selectedPhases = if ($Phase -eq "all") {
+        $allPhases
+    } else {
+        $allPhases | Where-Object { $_.Name -eq $Phase }
     }
 
-    if ($Phase -eq "config" -or $Phase -eq "all") {
-        Log-Header "CONFIG PHASE"
-        RunPhase -Label "CONFIG" -Directory "$ScriptDir\config" -Grep $Grep -DryRun:$DryRun
-    }
+    foreach ($entry in $selectedPhases) {
+        $phaseName = $entry.Name.ToUpper()
+        $phasePath = Resolve-Path -Path $entry.Path
 
-    if ($Phase -eq "post" -or $Phase -eq "all") {
-        Log-Header "POST PHASE"
-        RunPhase -Label "POST" -Directory "$ScriptDir\post" -Grep $Grep -DryRun:$DryRun
+        Write-Host "PHASE: $phaseName — Searching in: $phasePath"
+
+        $scripts = Get-ChildItem -Path $phasePath -Filter "*.ps1" -File
+
+        foreach ($script in $scripts) {
+            if ($Filter -and ($script.Name -notmatch $Filter)) {
+                continue
+            }
+
+            Write-Host "RUNNING SCRIPT: $($script.FullName)"
+            if (-not $DryRun) {
+                & $script.FullName
+            }
+        }
     }
 }
 
-Main
+Invoke-PhaseScripts -Filter $Filter -Phase $Phase -DryRun:$DryRun
