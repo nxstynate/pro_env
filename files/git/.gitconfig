@@ -1,0 +1,6 @@
+[user]
+	name = Nate
+	email = nathanael.paul.lewis@gmail.com
+[core]
+	editor = vim
+	autocrlf = false

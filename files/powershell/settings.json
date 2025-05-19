@@ -1,0 +1,311 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": 
+            {
+                "action": "nextTab"
+            },
+            "id": "User.nextTab.0"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disableAnimations": true,
+    "keybindings": 
+    [
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+tab"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.nextTab.0",
+            "keys": "ctrl+t"
+        }
+    ],
+    "launchMode": "fullscreen",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "Solarized Osaka",
+            "cursorShape": "filledBox",
+            "elevate": true,
+            "experimental.retroTerminalEffect": false,
+            "font": 
+            {
+                "face": "JetBrainsMono Nerd Font Mono",
+                "size": 16,
+                "weight": "normal"
+            },
+            "opacity": 32,
+            "useAcrylic": false
+        },
+        "list": 
+        [
+            {
+                "antialiasingMode": "cleartype",
+                "backgroundImage": null,
+                "backgroundImageOpacity": 0.16,
+                "colorScheme": "Rose Pine",
+                "commandline": "\"C:\\Users\\Paul\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe\"",
+                "compatibility.reloadEnvironmentVariables": true,
+                "cursorHeight": 11,
+                "cursorShape": "filledBox",
+                "elevate": true,
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "cellHeight": "1.4",
+                    "size": 16,
+                    "weight": "normal"
+                },
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "opacity": 31,
+                "padding": "4",
+                "scrollbarState": "hidden",
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": true
+            },
+            {
+                "colorScheme": "Gruvbox Dark",
+                "elevate": true,
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "cellHeight": "1.4",
+                    "face": "JetBrainsMono Nerd Font Mono",
+                    "size": 16,
+                    "weight": "normal"
+                },
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "opacity": 100,
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "useAcrylic": false
+            },
+            {
+                "backgroundImage": null,
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "elevate": true,
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 16,
+                    "weight": "black"
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": true,
+                "name": "Windows PowerShell",
+                "opacity": 100,
+                "tabTitle": "NXSTYNATE",
+                "useAcrylic": false
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "Command Prompt",
+                "opacity": 100,
+                "useAcrylic": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "opacity": 100,
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{2158625e-78ae-5374-a7d1-39f5af49fe15}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{18a0bf36-1953-5a60-975f-8b417ef0cf5d}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{bfd7c9f1-6656-5841-b6d7-e438bd028c03}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{4742db38-fc53-5853-87d3-dc9ff7dc0726}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{d7ff4eaf-8333-5ede-91a7-77aaa10bd51f}",
+                "hidden": false,
+                "name": "archlinux",
+                "source": "Microsoft.WSL"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#2B2B2B",
+            "black": "#1C1C1C",
+            "blue": "#50DBFF",
+            "brightBlack": "#373737",
+            "brightBlue": "#80DFFF",
+            "brightCyan": "#63FFFF",
+            "brightGreen": "#A0FF6B",
+            "brightPurple": "#CFA0FF",
+            "brightRed": "#FF734D",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF87",
+            "cursorColor": "#FF0000",
+            "cyan": "#39C884",
+            "foreground": "#AAAAAA",
+            "green": "#95D600",
+            "name": "Dark Graphite",
+            "purple": "#AD80FF",
+            "red": "#FF4D84",
+            "selectionBackground": "#525A97",
+            "white": "#FDFDFF",
+            "yellow": "#F6E162"
+        },
+        {
+            "background": "#101010",
+            "black": "#282828",
+            "blue": "#458588",
+            "brightBlack": "#928374",
+            "brightBlue": "#83A598",
+            "brightCyan": "#8EC07C",
+            "brightGreen": "#B8BB26",
+            "brightPurple": "#D3869B",
+            "brightRed": "#B7211F",
+            "brightWhite": "#BDAE93",
+            "brightYellow": "#FABD2F",
+            "cursorColor": "#586E75",
+            "cyan": "#689D6A",
+            "foreground": "#BDAE93",
+            "green": "#98971A",
+            "name": "Gruvbox Dark",
+            "purple": "#B16286",
+            "red": "#B7211F",
+            "selectionBackground": "#586E75",
+            "white": "#A89984",
+            "yellow": "#D79921"
+        },
+        {
+            "background": "#101010",
+            "black": "#706E86",
+            "blue": "#31748F",
+            "brightBlack": "#706E86",
+            "brightBlue": "#31748F",
+            "brightCyan": "#EBBCBA",
+            "brightGreen": "#9CCFD8",
+            "brightPurple": "#C4A7E7",
+            "brightRed": "#EB6F92",
+            "brightWhite": "#E0DEF4",
+            "brightYellow": "#F6C177",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#EBBCBA",
+            "foreground": "#E0DEF4",
+            "green": "#9CCFD8",
+            "name": "Rose Pine",
+            "purple": "#C4A7E7",
+            "red": "#EB6F92",
+            "selectionBackground": "#FFFFFF",
+            "white": "#E0DEF4",
+            "yellow": "#F6C177"
+        },
+        {
+            "background": "#101010",
+            "black": "#00141A",
+            "blue": "#268BD2",
+            "brightBlack": "#586E75",
+            "brightBlue": "#6C71C4",
+            "brightCyan": "#859900",
+            "brightGreen": "#9EACAD",
+            "brightPurple": "#494FB6",
+            "brightRed": "#B7211F",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#B58900",
+            "cursorColor": "#586E75",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "name": "Solarized Osaka",
+            "purple": "#D33682",
+            "red": "#B7211F",
+            "selectionBackground": "#103956",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        }
+    ],
+    "showTabsInTitlebar": true,
+    "tabWidthMode": "equal",
+    "themes": [],
+    "useAcrylicInTabRow": false
+}
