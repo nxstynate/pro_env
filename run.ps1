@@ -1,6 +1,6 @@
 param (
     [string]$Filter = "",
-    [ValidateSet("all", "install", "config")]
+    [ValidateSet("all", "install", "config", "uninstall")]
     [string]$Phase = "all",
     [switch]$DryRun
 )
@@ -14,18 +14,33 @@ function Invoke-PhaseScripts {
 
     $basePath = "..\pro-env"
 
-    $allPhases = @(
-        @{ Name = "install"; Path = Join-Path $basePath "install" },
-        @{ Name = "config"; Path = Join-Path $basePath "config" }
-    )
-
-    $selectedPhases = if ($Phase -eq "all") {
-        $allPhases
-    } else {
-        $allPhases | Where-Object { $_.Name -eq $Phase }
+    # Only include uninstall if it's explicitly requested
+    $allPhases = @()
+    switch ($Phase) {
+        "all" {
+            $allPhases = @(
+                @{ Name = "install"; Path = Join-Path $basePath "install" },
+                @{ Name = "config"; Path = Join-Path $basePath "config" }
+            )
+        }
+        "install" {
+            $allPhases = @(
+                @{ Name = "install"; Path = Join-Path $basePath "install" }
+            )
+        }
+        "config" {
+            $allPhases = @(
+                @{ Name = "config"; Path = Join-Path $basePath "config" }
+            )
+        }
+        "uninstall" {
+            $allPhases = @(
+                @{ Name = "uninstall"; Path = Join-Path $basePath "uninstall" }
+            )
+        }
     }
 
-    foreach ($entry in $selectedPhases) {
+    foreach ($entry in $allPhases) {
         $phaseName = $entry.Name.ToUpper()
         $phasePath = Resolve-Path -Path $entry.Path
 

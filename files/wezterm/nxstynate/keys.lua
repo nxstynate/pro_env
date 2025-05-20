@@ -1,10 +1,11 @@
 local wezterm = require("wezterm")
 
 local M = {}
-local wezterm_config_path = os.getenv("HOME") .. "/dotfiles/wezterm/nxstynate/init.lua"
+local wezterm_config_path = os.getenv("HOME") .. "/pro-env/files/wezterm/nxstynate/init.lua"
 local localproduction = "X:/LocalProduction/"
 local dir_youtube = "X:/Youtube/"
 local scratch_document = "$env:USERNAME/scratch.txt"
+local pro_env = os.getenv("HOME") .. "/pro-env/"
 
 function M.apply(config)
 	config.leader = { key = "t", mods = "CTRL", timeout_milliseconds = 1000 }
@@ -94,6 +95,17 @@ function M.apply(config)
 					SKIP_FASTFETCH = "1",
 				},
 				args = { "pwsh", "-NoExit", "-NoLogo", "-Command", "fcd" },
+			}),
+		},
+		{
+			mods = "LEADER",
+			key = "r",
+			action = wezterm.action.SpawnCommandInNewTab({
+				cwd = pro_env,
+				set_environment_variables = {
+					SKIP_FASTFETCH = "1",
+				},
+				args = { "pwsh", "-NoExit", "-NoLogo" },
 			}),
 		},
 		{

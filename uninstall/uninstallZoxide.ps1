@@ -1,0 +1,2 @@
+
+scoop uninstall main/zoxide
