@@ -1,5 +1,8 @@
-# Ignore GlazeWM runtime files
-files/glazewm/.glzr/
+# Ignore everything in .glzr
+files/glazewm/.glzr/*
+
+# But keep the config.ron file
+!files/glazewm/.glzr/glazewm/config.yaml
 
 # Ignore browser or webview cache
 **/EBWebView/
