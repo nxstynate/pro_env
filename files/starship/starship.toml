@@ -8,11 +8,11 @@ style_root = "bold red"           # This applies when running as Admin
 style_user = "bold blue"          # This applies for normal user mode
 disabled = false
 
-# [time]
-# disabled = false
-# format = " [$time]($style) "
-# time_format = "%H:%M:%S"
-# style = "bold yellow"
+[time]
+disabled = false
+format = " [$time]($style) "
+time_format = "%H:%M:%S"
+style = "bold yellow"
 
 [aws]
 symbol = "  "

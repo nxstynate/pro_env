@@ -100,13 +100,24 @@ function M.apply(config)
 		},
 		{
 			mods = "LEADER",
-			key = "r",
+			key = "e",
 			action = wezterm.action.SpawnCommandInNewTab({
-				cwd = pro_env,
+				cwd = pro_env, -- Make sure 'pro_env' is defined elsewhere
 				set_environment_variables = {
 					SKIP_FASTFETCH = "1",
 				},
-				args = { "pwsh", "-NoExit", "-NoLogo" },
+				args = { "pwsh", "-NoExit", "-NoLogo" }, -- Fixed typo
+			}),
+		},
+		{
+			mods = "LEADER",
+			key = "r",
+			action = wezterm.action.SpawnCommandInNewTab({
+				cwd = pro_env, -- Make sure 'pro_env' is defined elsewhere
+				set_environment_variables = {
+					SKIP_FASTFETCH = "1",
+				},
+				args = { "pwsh", "-NoExit", "-NoLogo", "-Command", "nvim (fzf)" }, -- Fixed typo
 			}),
 		},
 		{

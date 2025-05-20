@@ -8,9 +8,9 @@ function M.apply(config)
 	config.enable_scroll_bar = false
 	-- config.color_scheme = theme_custom
 	-- config.dpi = 300
-	config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Thin" })
+	-- config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Thin" })
 	-- config.font = wezterm.font("FiraMono Nerd Font Mono", { weight = "Regular" })
-	-- config.font = wezterm.font("BlexMono Nerd Font Mono", { weight = "Light" })
+	config.font = wezterm.font("BlexMono Nerd Font Mono", { weight = "Light" })
 	-- config.font = wezterm.font("Hack Nerd Font Mono", { weight = "Regular" })
 	config.font_size = 20
 	config.force_reverse_video_cursor = false
