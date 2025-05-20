@@ -1,6 +1,5 @@
-
 $source = "$HOME/pro-env/files/neovim/nvim"  # Change to the source directory
-$target = "$HOME/AppData/Local/nvim"  # Change to the target directory
+$target = "$env:localappdata/nvim"  # Change to the target directory
 
 # Check if something exists at the target path
 if (Test-Path $target) {
