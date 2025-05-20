@@ -6,6 +6,7 @@ local localproduction = "X:/LocalProduction/"
 local dir_youtube = "X:/Youtube/"
 local scratch_document = "$env:USERNAME/scratch.txt"
 local pro_env = os.getenv("HOME") .. "/pro-env/"
+local powershell_profile = os.getenv("HOME") .. "/pro-env/files/powershell/Microsoft.PowerShell_profile.ps1"
 
 function M.apply(config)
 	config.leader = { key = "t", mods = "CTRL", timeout_milliseconds = 1000 }
@@ -83,7 +84,7 @@ function M.apply(config)
 				set_environment_variables = {
 					SKIP_FASTFETCH = "1",
 				},
-				args = { "pwsh", "-NoLogo", "-Command", "nvim $PROFILE" },
+				args = { "pwsh", "-NoLogo", "-Command", "nvim", powershell_profile },
 			}),
 		},
 		{
