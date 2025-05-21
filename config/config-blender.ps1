@@ -14,5 +14,5 @@ function configBlender  {
   Write-Output "Copying config files to setup your envinronment complete..."
 }
 
-# configBlender
+configBlender
 
