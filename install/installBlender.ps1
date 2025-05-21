@@ -9,6 +9,19 @@ $webRequest = "https://ftp.blender.org/release/Blender$ver/$package$extension"
 $configPath = "$env:APPDATA/Blender Foundation/Blender"
 $dropboxConfigFiles = "https://www.dropbox.com/scl/fi/3mp73hnzl4eyuu5b4628g/configFiles.zip?rlkey=1snswsc65ouexugsmyj1gymum&st=slw6e39a&dl=1"
 
+function CheckDir {
+    $blenderPath = "$HOME/programs/"
+    if (-not (Test-Path $blenderPath)) {
+        Write-Host "❌ Directory does not exist: $blenderPath"
+        Write-Host "Creating: $blenderPath"
+        New-Item -ItemType Directory -Path $blenderPath 
+        Write-Host "📁 Created directory: $blenderPath"
+    } else {
+        Write-Host "✅ Directory exists: $blenderPath"
+    }
+}
+
+
 function InstallBlender {
   Write-Output "Downloading Blender $ver..."
   Invoke-WebRequest -Uri "$webRequest" -OutFile "$blenderPath/"
@@ -57,6 +70,7 @@ function ConfigPaths {
   Write-Host "Run Blender using this shortcut to use portable configuration."
   }
 
+CheckDir
 InstallBlender
 # ConfigPaths
 
