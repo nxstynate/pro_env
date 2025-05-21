@@ -67,7 +67,11 @@ Set-Alias g git
 Set-Alias grep findstr
 Set-Alias touch New-Item
 #Set-Alias which Get-Command
-function which { (Get-Command $args[0] -ErrorAction SilentlyContinue).Source }
+# function which { (Get-Command $args[0] -ErrorAction SilentlyContinue).Source }
+function which ($command) {
+  Get-Command -Name $command -ErrorAction SilentlyContinue |
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
 #Set-Alias lockscreen "rundll32.exe user32.dll,LockWorkStation"
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'

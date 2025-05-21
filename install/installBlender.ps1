@@ -21,7 +21,6 @@ function CheckDir {
     }
 }
 
-
 function InstallBlender {
   Write-Output "Downloading Blender $ver..."
   Invoke-WebRequest -Uri "$webRequest" -OutFile "$blenderPath/"
