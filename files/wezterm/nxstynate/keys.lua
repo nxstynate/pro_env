@@ -60,7 +60,7 @@ function M.apply(config)
 			mods = "LEADER",
 			key = "y",
 			action = wezterm.action.SwitchToWorkspace({
-				name = "YOUTUBE",
+				name = "YOUTUBE: @NXSTYNATE",
 				spawn = {
 					cwd = dir_youtube,
 					set_environment_variables = {

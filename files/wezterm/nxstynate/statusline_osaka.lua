@@ -50,7 +50,7 @@ function M.apply(config)
 			{ Text = "WS:[" .. workspace .. "] " },
 		}
 
-		if workspace ~= "YOUTUBE" then
+		if workspace ~= "YOUTUBE: @NXSTYNATE" then
 			local time = wezterm.strftime("%a %Y-%m-%d %H:%M")
 			table.insert(elements, { Foreground = { Color = colors.green } })
 			table.insert(elements, { Text = " " .. time .. " " })

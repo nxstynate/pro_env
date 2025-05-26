@@ -1,14 +1,24 @@
 local M = {}
 
 function M.apply(config)
-	-- local bg_image = os.getenv("HOME") .. "/pro-env/files/wezterm/nxstynate/images/background-01.jpg"
-	local bg_image = os.getenv("HOME") .. "/pro-env/files/wezterm/nxstynate/images/background-02.jpg"
+	local bg_image = os.getenv("HOME") .. "/pro-env/files/wezterm/nxstynate/images/background-05.jpg"
 
-	config.window_background_image = bg_image
-	config.window_background_image_hsb = {
-		brightness = 0.015, -- 0 = black, 1 = full brightness
-		hue = 1.0,
-		saturation = 0.5,
+	config.background = {
+		{
+			source = { File = bg_image },
+			hsb = {
+				brightness = 0.3,
+				hue = 1.0,
+				saturation = 1.0,
+			},
+			attachment = "Fixed",
+			width = "Cover",
+			height = "Cover",
+			repeat_x = "NoRepeat",
+			repeat_y = "NoRepeat",
+			horizontal_align = "Center",
+			vertical_align = "Middle",
+		},
 	}
 end
 

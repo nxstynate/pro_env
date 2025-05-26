@@ -1,3 +1,5 @@
+#file entry point
+
 param (
     [string]$Filter = "",
     [ValidateSet("all", "install", "config", "uninstall")]

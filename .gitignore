@@ -7,3 +7,5 @@ files/glazewm/.glzr/*
 # Ignore browser or webview cache
 **/EBWebView/
 **/Cache/
+
+#hello world
