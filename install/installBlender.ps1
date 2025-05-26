@@ -1,7 +1,7 @@
 # Installs Blender and sets up work environment.
 
-$ver = "4.4"
-$verSub = ".3"
+$ver = "4.2"
+$verSub = ".10"
 $blenderPath = "$HOME/programs"
 $extension = ".zip"
 $package = "blender-$ver$verSub-windows-x64"
@@ -32,18 +32,8 @@ function InstallBlender {
   Write-Output "Renaming Folder..."
   Move-Item -Path "$package" -Destination "Blender$ver" -Force 
 
-  # Write-Output "Copying config files to setup your envinronment..."
-  # Invoke-WebRequest -Uri "$dropboxConfigFiles" -OutFile "$blenderPath/configFiles.zip"
-  # Expand-Archive "$blenderPath/configFiles.zip" "$blenderPath/."
-  # Copy-Item -Path "$blenderPath/configFiles" -Destination "$configPath/$ver" -Force -Recurse
-
-  # Write-Output "Launching Blender $ver..."
-  # Start-Process "$blenderPath/Blender$ver/blender.exe"
-
   Write-Output "Removing installation files..."
   Remove-Item -Path "$blenderPath/$package$extension" -Force
-  # Remove-Item -Path "$blenderPath/configFiles.zip" -Force
-  # Remove-Item -Path "$blenderPath/configFiles" -Force -Recurse
 
   Write-Output "Installation of Blender$ver$verSub complete..."
   }
@@ -71,5 +61,6 @@ function ConfigPaths {
 
 CheckDir
 InstallBlender
+ShortCutSetup
 # ConfigPaths
 

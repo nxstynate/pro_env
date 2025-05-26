@@ -1,6 +1,6 @@
 # Uninstalls Blender Portable
 
-$version = "4.4"
+$version = "4.2"
 
 function UninstallBlender {
   Write-Output "Removing Blender$version..."
