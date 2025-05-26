@@ -1,7 +1,3 @@
-Here’s a clean and professional `README.md` draft for your `pro-env` GitHub repo:
-
----
-
 # Production Environment aka: pro-env
 
 **pro-env** is a modular, cross-platform environment automation system built to streamline your system setup for productivity, 3D rendering, and creative workflows. Whether you're working on Windows, WSL, or Linux, `pro-env` helps you install, configure, and launch a consistent environment with minimal effort.
