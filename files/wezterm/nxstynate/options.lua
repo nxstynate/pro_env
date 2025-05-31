@@ -8,9 +8,9 @@ function M.apply(config)
 	config.enable_scroll_bar = false
 	-- config.color_scheme = theme_custom
 	-- config.dpi = 300
-	config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Thin" })
+	-- config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Thin" })
 	-- config.font = wezterm.font("FiraMono Nerd Font Mono", { weight = "Regular" })
-	-- config.font = wezterm.font("BlexMono Nerd Font Mono", { weight = "Light" })
+	config.font = wezterm.font("BlexMono Nerd Font Mono", { weight = "Light" })
 	-- config.font = wezterm.font("Hack Nerd Font Mono", { weight = "Regular" })
 	config.font_size = 20
 	config.force_reverse_video_cursor = false
@@ -35,8 +35,10 @@ function M.apply(config)
 	config.webgpu_power_preference = "HighPerformance"
 	config.max_fps = 144
 	config.underline_thickness = "1pt"
+
 	--Workspace
 	config.default_workspace = "HOME"
+	config.hide_mouse_cursor_when_typing = true
 
 	--Distribution
 	-- config.default_domain = "WSL:archlinux"

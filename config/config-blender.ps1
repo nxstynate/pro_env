@@ -1,4 +1,4 @@
-$ver = "4.2"
+$ver = "4.5"
 $blenderPath = "$HOME/programs"
 $dropboxConfigFiles = "https://www.dropbox.com/scl/fi/3mp73hnzl4eyuu5b4628g/configFiles.zip?rlkey=1snswsc65ouexugsmyj1gymum&st=slw6e39a&dl=1"
 $configPath = "$env:APPDATA/Blender Foundation/Blender"
