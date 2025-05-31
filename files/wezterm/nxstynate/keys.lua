@@ -30,6 +30,7 @@ function M.apply(config)
 		{ mods = "LEADER", key = "t", action = wezterm.action.ShowTabNavigator },
 		{ mods = "LEADER", key = "Return", action = wezterm.action.TogglePaneZoomState },
 		{ mods = "LEADER", key = "f", action = wezterm.action.ToggleFullScreen },
+		{ mods = "LEADER|CTRL", key = "j", action = wezterm.action.ActivateCopyMode },
 		{
 			mods = "LEADER",
 			key = "u",
