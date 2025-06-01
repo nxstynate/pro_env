@@ -126,6 +126,22 @@ function M.apply(config)
 			mods = "LEADER",
 			action = wezterm.action.ShowLauncherArgs({ flags = "WORKSPACES" }),
 		},
+		{
+			mods = "LEADER|CTRL",
+			key = "s",
+			action = wezterm.action.SpawnCommandInNewTab({
+				set_environment_variables = {
+					SKIP_FASTFETCH = "1",
+				},
+				args = {
+					"pwsh",
+					-- "-NoExit",
+					"-NoLogo",
+					"-File",
+					wezterm.home_dir .. "/pro-env/files/wezterm/wezterm_sessionizer.ps1",
+				}, -- Fixed typo
+			}),
+		},
 	}
 
 	-- Add LEADER + number keys for tab switching
