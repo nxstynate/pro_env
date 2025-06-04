@@ -4,7 +4,7 @@ files/glazewm/.glzr/*
 # But keep the config.ron file
 !files/glazewm/.glzr/glazewm/config.yaml
 
-!/files/wezterm/nxstynate/ssh_domain.lua
+./files/wezterm/nxstynate/ssh_domain.lua
 
 # Ignore browser or webview cache
 **/EBWebView/
