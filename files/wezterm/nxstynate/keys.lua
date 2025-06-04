@@ -1,12 +1,13 @@
 local wezterm = require("wezterm")
+local home = os.getenv("HOME") or os.getenv("USERPROFILE") or os.getenv(XDG_CONFIG_HOME)
 
 local M = {}
-local wezterm_config_path = os.getenv("HOME") .. "/pro-env/files/wezterm/nxstynate/init.lua"
+local wezterm_config_path = home .. "/pro-env/files/wezterm/nxstynate/init.lua"
 local localproduction = "X:/LocalProduction/"
 local dir_youtube = "X:/Youtube/"
 local scratch_document = "$env:USERNAME/scratch.txt"
-local pro_env = os.getenv("HOME") .. "/pro-env/"
-local powershell_profile = os.getenv("HOME") .. "/pro-env/files/powershell/Microsoft.PowerShell_profile.ps1"
+local pro_env = home .. "/pro-env/"
+local powershell_profile = home .. "/pro-env/files/powershell/Microsoft.PowerShell_profile.ps1"
 
 function M.apply(config)
 	config.leader = { key = "t", mods = "CTRL", timeout_milliseconds = 1000 }
