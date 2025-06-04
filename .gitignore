@@ -1,13 +1,13 @@
 # Ignore everything in .glzr
 files/glazewm/.glzr/*
 
-# But keep the config.ron file
+# Allow specific config file through
+!files/glazewm/.glzr/glazewm/
 !files/glazewm/.glzr/glazewm/config.yaml
 
-./files/wezterm/nxstynate/ssh_domain.lua
+# Ignore ssh_domain.lua
+files/wezterm/nxstynate/ssh_domain.lua
 
 # Ignore browser or webview cache
 **/EBWebView/
 **/Cache/
-
-#hello world
