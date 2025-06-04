@@ -11,6 +11,6 @@ require("nxstynate.shell").apply(config)
 require("nxstynate.options").apply(config)
 require("nxstynate.background").apply(config)
 require("nxstynate.keys").apply(config)
-require("nxstynate.ssh_domain").apply(config)
+-- require("nxstynate.ssh_domain").apply(config)
 
 return config
