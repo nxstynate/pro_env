@@ -1,7 +1,11 @@
+local wezterm = require("wezterm")
+local home = os.getenv("HOME") or os.getenv("USERPROFILE") or os.getenv(XDG_CONFIG_HOME)
+
 local M = {}
 
 function M.apply(config)
-	local bg_image = os.getenv("HOME") .. "\\pro-env\\files\\wezterm\\nxstynate\\images\\background-05.jpg"
+	-- local bg_image = os.getenv("HOME") .. "/pro-env/files/wezterm/nxstynate/images/background-05.jpg"
+	local bg_image = home .. "/pro-env/files/wezterm/nxstynate/images/background-05.jpg"
 
 	config.background = {
 		{
