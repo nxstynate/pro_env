@@ -1,12 +1,15 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder and wezterm.config_builder() or {}
+local global_theme = "rose_pine"
 
--- require("nxstynate.theme").apply(config)
--- require("nxstynate.statusline_rose_pine").apply(config)
-require("nxstynate.theme_solarized_osaka").apply(config)
-require("nxstynate.statusline_osaka").apply(config)
-require("nxstynate.theme_custom").apply(config)
--- require("nxstynate.tabtitle").apply(config)
+if global_theme == "rose_pine" then
+	require("nxstynate.theme_rose_pine").apply(config, global_theme)
+else
+	require("nxstynate.theme_solarized_osaka").apply(config, global_theme)
+end
+
+require("nxstynate.statusline").apply(config, global_theme)
+require("nxstynate.colors.custom").apply(config)
 require("nxstynate.shell").apply(config)
 require("nxstynate.options").apply(config)
 require("nxstynate.background").apply(config)
