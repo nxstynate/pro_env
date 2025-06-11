@@ -7,6 +7,7 @@ files/glazewm/.glzr/*
 
 # AlbosToolset
 files/blender/blenderTools/AlbosToolset/*
+files/blender/blenderTools/AlbosTheme/*
 
 # Ignore ssh_domain.lua
 files/wezterm/nxstynate/ssh_domain.lua
