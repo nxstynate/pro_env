@@ -43,6 +43,8 @@ start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --new-window --
 echo Launching Google Trello and Miro...
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --new-window "https://miro.com/app/dashboard/"
 timeout /t 1 /nobreak >nul
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://next.waveapps.com/"
+timeout /t 1 /nobreak >nul
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://trello.com/b/vHEaopgO/template"
 
 

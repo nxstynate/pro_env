@@ -119,7 +119,7 @@ function M.apply(config)
 				set_environment_variables = {
 					SKIP_FASTFETCH = "1",
 				},
-				args = { "pwsh", "-NoExit", "-NoLogo", "-Command", "nvim (fzf)" }, -- Fixed typo
+				args = { "pwsh", "-NoLogo", "-Command", "nvim (fzf)" }, -- Fixed typo
 			}),
 		},
 		{

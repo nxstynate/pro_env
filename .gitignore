@@ -5,6 +5,9 @@ files/glazewm/.glzr/*
 !files/glazewm/.glzr/glazewm/
 !files/glazewm/.glzr/glazewm/config.yaml
 
+# AlbosToolset
+files/blender/blenderTools/AlbosToolset/*
+
 # Ignore ssh_domain.lua
 files/wezterm/nxstynate/ssh_domain.lua
 

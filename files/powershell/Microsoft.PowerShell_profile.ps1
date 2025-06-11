@@ -107,6 +107,7 @@ Set-Alias flamencoWorker "C:\Users\Paul\Documents\Nate\flamenco-render-managemen
 Set-Alias OctaneServer "C:\Program Files\Otoy\OctaneServerPrime\OctaneServer.exe"
 Set-Alias ccleaner "C:\Program Files\CCleaner\CCleaner64.exe"
 Set-Alias createproject "C:\Users\Paul\pro-env\deploy\create-projects.ps1"
+Set-Alias timestamp "$HOME\pro-env\deploy\timestamp-update.ps1"
 #Set-Alias EditTerminalSettings "cd C:\Users\Paul\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 function EditTerminalSettings { vim "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" }
 
@@ -498,3 +499,7 @@ function Update-GitRepo {
   git push
 }
 
+
+#Wezterm Executions---------------------------------------------------------------------------------------------
+# pwsh -ExecutionPolicy Bypass -File "$HOME/pro-env/files/wezterm/wezterm_restore.ps1"
+# pwsh -ExecutionPolicy Bypass -File "$HOME/pro-env/files/wezterm/wezterm_save_session.ps1"

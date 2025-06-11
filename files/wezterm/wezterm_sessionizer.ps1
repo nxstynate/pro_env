@@ -6,9 +6,9 @@ $configDir = Join-Path $configHOME "wezterm-sessionizer"
 $configFile = Join-Path $configDir "wezterm-sessionizer.conf"
 
 # Defaults
-$TS_SEARCH_PATHS = @("X:/Dropbox/1_Projects/", "X:/LocalProduction/", "X:/Dropbox/2_Library/")
+$TS_SEARCH_PATHS = @("X:/Dropbox/1_Projects/", "X:/LocalProduction/", "X:/Dropbox/2_Library/", "X:/GoogleDriveBlackout")
 $TS_EXTRA_SEARCH_PATHS = @()
-$TS_MAX_DEPTH = 1
+$TS_MAX_DEPTH = 2
 
 # Load config if it exists
 if (Test-Path $configFile) {

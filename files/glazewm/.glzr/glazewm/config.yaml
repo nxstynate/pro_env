@@ -152,11 +152,11 @@ window_rules:
       - window_title: { regex: "Voice|WhatsApp" }
   - commands: ["move --workspace 7"]
     match:
-      - window_process: { regex: "blender|SketchUp|3dsmax|AfterFX|Photoshop|Illustrator" }
+      - window_process: { regex: "blender|3dsmax|AfterFX|Photoshop|Illustrator" }
       - window_title:
           {
             regex: "C:\\Program Files\\Blender Foundation\\Blender 4.2\\blender.exe",
-            "C:\\Program Files\\SketchUp\\SketchUp 2021\\SketchUp.exe",
+            # "C:\\Program Files\\SketchUp\\SketchUp 2021\\SketchUp.exe",
             "C:\\Program Files\\Autodesk\\3ds Max 2022\\3dsmax.exe",
             "C:\\Program Files\\Adobe\\Adobe After Effects 2025\\Support Files\\AfterFX.exe",
             "C:\\Program Files\\Adobe\\Adobe Photoshop 2025\\Photoshop.exe",
@@ -164,10 +164,11 @@ window_rules:
           }
   - commands: ["move --workspace 8"]
     match:
-      - window_process: { regex: "Zoom" }
+      - window_process: { regex: "Zoom|SketchUp" }
       - window_title:
           {
-            regex: "C:\\Program Files\\Zoom\\bin\\Zoom.exe" 
+            regex: "C:\\Program Files\\Zoom\\bin\\Zoom.exe" ,
+            "C:\\Program Files\\SketchUp\\SketchUp 2021\\SketchUp.exe",
           }
   - commands: ["ignore"]
     match:

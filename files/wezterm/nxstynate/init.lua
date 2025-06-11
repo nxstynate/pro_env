@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder and wezterm.config_builder() or {}
-local global_theme = "rose_pine"
+local global_theme = "osaka"
 
 if global_theme == "rose_pine" then
 	require("nxstynate.theme_rose_pine").apply(config, global_theme)
