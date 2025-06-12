@@ -106,7 +106,8 @@ Set-Alias flamencoManager "C:\Users\Paul\Documents\Nate\flamenco-render-manageme
 Set-Alias flamencoWorker "C:\Users\Paul\Documents\Nate\flamenco-render-management\flamenco-3.4-windows-amd64\flamenco-worker.exe"
 Set-Alias OctaneServer "C:\Program Files\Otoy\OctaneServerPrime\OctaneServer.exe"
 Set-Alias ccleaner "C:\Program Files\CCleaner\CCleaner64.exe"
-Set-Alias createproject "C:\Users\Paul\pro-env\deploy\create-projects.ps1"
+Set-Alias createproject "$HOME\pro-env\deploy\create-projects.ps1"
+Set-Alias budgetBreakdown "X:\LocalProduction\scripting\prod-scripts\budget-breakdown.ps1"
 Set-Alias timestamp "$HOME\pro-env\deploy\timestamp-update.ps1"
 #Set-Alias EditTerminalSettings "cd C:\Users\Paul\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 function EditTerminalSettings { vim "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" }
